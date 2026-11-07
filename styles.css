@@ -1,0 +1,58 @@
+/* CSC457 Homework 3 — shared styles for all pages */
+:root { --ink:#243047; --muted-ink:#526078; --accent:#7654a5; --accent-dark:#4d3476; --accent-light:#eee8f7; --paper:#fff; --page:#f5f2f9; --border:#ded6e9; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:100%; }
+body { margin:0; background:var(--page); color:var(--ink); font-family:"Segoe UI",Arial,sans-serif; font-size:1rem; line-height:1.7; }
+header { background:var(--accent-dark); padding:1rem 5vw; box-shadow:0 .2rem .8rem rgb(36 48 71 / 14%); }
+nav { display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem; max-width:70rem; margin:0 auto; padding:.25rem; background:transparent; }
+nav a { display:inline-block; padding:.65rem 1rem; border-radius:.5rem; color:#fff; font-weight:600; text-decoration:none; transition:background-color 160ms ease,color 160ms ease; }
+nav a:hover, nav a:focus-visible { background:var(--accent-light); color:var(--accent-dark); outline:none; }
+main { width:min(90%,62rem); min-height:65vh; margin:2.5rem auto; padding:clamp(1.25rem,4vw,3rem); background:var(--paper); border:1px solid var(--border); border-radius:1rem; box-shadow:0 .5rem 1.8rem rgb(36 48 71 / 7%); }
+h1,h2,h3 { color:var(--accent-dark); line-height:1.25; text-shadow:1px 1px 2px rgb(77 52 118 / 12%); }
+h1 { margin:0 0 1rem; font-size:clamp(2rem,5vw,3rem); font-weight:750; text-align:center; }
+h2 { margin-top:2rem; padding-bottom:.45rem; border-bottom:2px solid var(--accent-light); font-size:clamp(1.4rem,3vw,1.9rem); }
+h3 { margin-top:1.5rem; font-size:1.15rem; text-transform:capitalize; }
+p { margin:0 0 1rem; color:var(--muted-ink); font-size:1rem; }
+ul,ol { margin:0 0 1.5rem; padding-left:1.8rem; list-style-position:outside; }
+ul { list-style-type:square; } ol { list-style-type:decimal; } li { padding:.15rem 0; }
+dl { margin:0 0 1.5rem; padding:1rem 1.25rem; background:var(--accent-light); border-left:.25rem solid var(--accent); border-radius:.35rem; }
+dt { margin:.35rem 0; font-weight:700; }
+a { color:var(--accent); font-weight:600; text-underline-offset:.2em; }
+main > a { display:inline-block; margin-top:.75rem; } a:hover,a:focus-visible { color:var(--accent-dark); }
+#intro { padding:1rem 1.25rem; background:var(--accent-light); border-radius:.5rem; }
+.highlight { color:var(--accent-dark); font-weight:700; }
+article { margin:1.5rem 0 2rem; padding:clamp(1rem,3vw,1.75rem); border:1px solid var(--border); border-radius:.75rem; background:#fdfcff; }
+article h2 { margin-top:0; }
+figure { margin:1.25rem 0; text-align:center; }
+figure img { display:block; width:min(100%,31.25rem); height:auto; margin:0 auto; border:1px solid var(--border); border-radius:.5rem; }
+figcaption { margin-top:.5rem; color:var(--muted-ink); font-size:.9rem; font-style:italic; }
+footer { padding:1.25rem 5vw; background:#e9e2f2; text-align:center; } footer p { margin:0; font-size:.9rem; }
+@media (max-width:38rem) { header { padding:.75rem 3vw; } nav { gap:.25rem; } nav a { padding:.55rem .7rem; } main { width:94%; margin:1rem auto; padding:1.15rem; border-radius:.65rem; } h1 { text-align:left; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition-duration:.01ms !important; } }
+
+
+button {
+    padding: 0.65rem 1rem;
+    margin: 0.5rem 0 1rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 160ms ease;
+}
+
+button:hover {
+    background: var(--accent-dark);
+}
+
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    background: var(--accent-light);
+    border-left: 0.25rem solid var(--accent);
+    border-radius: 0.35rem;
+    color: var(--muted-ink);
+}
